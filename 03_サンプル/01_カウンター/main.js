@@ -10,3 +10,17 @@ plusButton.onclick = function() {
   // count を表示
   display.textContent = count
 }
+
+const minusButton = document.getElementById("minus-button")
+
+minusButton.onclick = function() {
+  count -= 1
+  display.textContent = count
+}
+
+const doubleButton = document.getElementById("double-button")
+
+doubleButton.onclick = function() {
+  count *= 2
+  display.textContent = count
+}
