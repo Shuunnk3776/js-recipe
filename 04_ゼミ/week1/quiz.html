@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>WebExpertコーステンプレート</title>
+  </head>
+  <body>
+    <div id="element">ここを変える</div>
+    <button id="button1">木曜日</button>
+    <button id="button2">金曜日</button>
+    <button id="button3">土曜日</button>
+    <div>答えを表示するぶぶん</div>
+
+    <script>
+      const element = document.getElementById("element") //  document.getElementById("id")を使うことでHTML要素を取得できる
+
+      console.dir(element) // console.dir() を使えば、HTML要素がプロパティに何を持っているのかが分かる
+
+      element.textContent = "今日は何曜日でしょうか？" // 要素のプロパティを書き換えることで、DOMを操作できる
+
+      const button1 = document.getElementById("button1")
+      const button2 = document.getElementById("button2")
+      const button3 = document.getElementById("button3")
+
+      const seikaiMessage = function() {
+        alert("正解")
+      }
+      const huseikaiMessage = function() {
+        alert("不正解")
+      }
+
+      // ボタンを押した時にallertMessage1が実行されるようにしたい
+      button1.onclick = function() {
+        // ここがボタンを押した時に実行される
+        huseikaiMessage()
+      }
+
+      // huseikaiMessage();
+      button2.onclick = function() {
+        seikaiMessage()
+      }
+
+      button3.onclick = huseikaiMessage
+    </script>
+  </body>
+</html>
