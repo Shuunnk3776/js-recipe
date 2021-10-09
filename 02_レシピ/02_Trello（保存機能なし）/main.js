@@ -9,6 +9,15 @@ addButton.onclick = function() {
   inputElement.value = ""
 }
 
+inputElement.onkeydown = function(event) {
+  if (event.key === `Enter`) {
+    const card = createCard(inputElement.value)
+    container.append(card)
+
+    inputElement.value = ""
+  }
+}
+
 const createCard = function(text) {
   const card = document.createElement("div")
   card.className = "card"
