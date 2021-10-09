@@ -19,6 +19,10 @@
       <div id="display-jihanki-money">0</div>
     </section>
     <section>
+      <h3>お釣り</h3>
+      <button id="return-button">払い戻し</button>
+    </section>
+    <section>
       <h3>商品を買う</h3>
       <button id="buy-button-tea">お茶(100円)</button>
     </section>
@@ -35,6 +39,7 @@
         "display-jihanki-money",
       )
       const addButton100 = document.getElementById("add-button-100")
+      const returnButton = document.getElementById("return-button")
 
       let saifu = 1000
       let jihankiMoney = 0
@@ -48,6 +53,12 @@
         }
       }
 
+      returnButton.onclick = function() {
+        saifu += jihankiMoney
+        jihankiMoney = 0
+        displaySaifu.textContent = saifu
+        displayJihankiMoney.textContent = jihankiMoney
+      }
       // buyButtonTea を押した時の処理
       buyButtonTea.onclick = function() {
         if (jihankiMoney >= 100) {
