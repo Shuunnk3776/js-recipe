@@ -1,0 +1,4 @@
+/*class名は先頭に. id名は先頭に＃ */
+.card {
+  display: flex;
+}

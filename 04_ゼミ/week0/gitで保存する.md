@@ -3,5 +3,5 @@
 ```bash
 git add .
 git commit -m "コミット"
-git push origin mas
+git push origin masd
 ```
